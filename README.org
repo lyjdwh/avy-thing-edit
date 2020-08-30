@@ -1,0 +1,3 @@
+* avy thing edit
+  
+  add avy-jump to [[https://github.com/manateelazycat/thing-edit][thing-edit]]
