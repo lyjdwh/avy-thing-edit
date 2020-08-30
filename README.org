@@ -1,3 +1,102 @@
-* avy thing edit
+* About
   
   add avy-jump to [[https://github.com/manateelazycat/thing-edit][thing-edit]]
+
+* Usage
+** Installation
+   
+  1. install [[https://github.com/manateelazycat/thing-edit][thing-edit]] and [[https://github.com/abo-abo/avy][avy]]
+  2. Clone or download this repository (path of the folder is the
+     <path-to-thing-edit> used below).In your ~/.emacs, add the following two
+     lines:
+
+     #+BEGIN_SRC emacs-lisp
+       (add-to-list 'load-path "<path-to-thing-edit>") ; add thing-edit to your load-path
+       (require 'avy-thing-edit)
+     #+END_SRC
+   
+** Custom variable
+   ~avy-thing-edit-jump-command~, default value is ~evil-avy-goto-char-2~
+   
+** Commands
+   
+| Function                            | Description                                                        |
+|-------------------------------------+--------------------------------------------------------------------|
+| avy-thing-copy-sexp                 | copy sexp around cursor.                                           |
+| avy-thing-replace-sexp              | replace sexp around cursor with content of kill-ring.              |
+|                                     |                                                                    |
+| avy-thing-cut-email                 | cut email string around cursor                                     |
+| avy-thing-copy-email                | copy email string around cursor.                                   |
+| avy-thing-replace-email             | replace email string around cursor with content of kill-ring.      |
+|                                     |                                                                    |
+| avy-thing-cut-filename              | cut filename string around cursor.                                 |
+| avy-thing-copy-filename             | copy filename string around cursor.                                |
+| avy-thing-replace-filename          | replace filename string around cursor with content of kill-ring.   |
+|                                     |                                                                    |
+| avy-thing-cut-url                   | cut url string around cursor.                                      |
+| avy-thing-copy-url                  | copy url string around cursor.                                     |
+| avy-thing-replace-url               | replace url string around cursor with content of kill-ring.        |
+|                                     |                                                                    |
+| avy-thing-cut-word                  | cut word string around cursor.                                     |
+| avy-thing-copy-word                 | copy word string around cursor.                                    |
+| avy-thing-replace-word              | replace word string around cursor with content of kill-ring.       |
+|                                     |                                                                    |
+| avy-thing-cut-symbol                | cut symbol string around cursor.                                   |
+| avy-thing-copy-symbol               | copy symbol string around cursor.                                  |
+| avy-thing-replace-symbol            | replace symbol string around cursor with content of kill-ring.     |
+|                                     |                                                                    |
+| avy-thing-cut-defun                 | cut function string around cursor.                                 |
+| avy-thing-copy-defun                | copy function string around cursor.                                |
+| avy-thing-replace-defun             | replace function string around cursor with content of kill-ring.   |
+|                                     |                                                                    |
+| avy-thing-cut-list                  | cut list string around cursor.                                     |
+| avy-thing-copy-list                 | copy list string around cursor.                                    |
+| avy-thing-replace-list              | replace list string around cursor with content of kill-ring.       |
+|                                     |                                                                    |
+| avy-thing-cut-sentence              | cut sentence string around cursor.                                 |
+| avy-thing-copy-sentence             | copy sentence string around cursor.                                |
+| avy-thing-replace-sentence          | replace sentence string around cursor with content of kill-ring.   |
+|                                     |                                                                    |
+| avy-thing-cut-whitespace            | cut whitespace string around cursor.                               |
+| avy-thing-copy-whitespace           | copy whitespace string around cursor.                              |
+| avy-thing-replace-whitespace        | replace whitespace string around cursor with content of kill-ring. |
+|                                     |                                                                    |
+| avy-thing-cut-page                  | cut page string around cursor.                                     |
+| avy-thing-copy-page                 | copy page string around cursor.                                    |
+| avy-thing-replace-page              | replace page string around cursor with content of kill-ring.       |
+|                                     |                                                                    |
+| avy-thing-cut-line                  | cut current line.                                                  |
+| avy-thing-copy-line                 | copy current line.                                                 |
+| avy-thing-replace-line              | replace current line with content of kill-ring.                    |
+|                                     |                                                                    |
+| avy-thing-cut-region-or-line        | cut current region or line.                                        |
+| avy-thing-copy-region-or-line       | copy current region or line.                                       |
+| avy-thing-replace-region-or-line    | replace current region or line with content of kill-ring.          |
+|                                     |                                                                    |
+| avy-thing-cut-to-line-end           | cut string to end of line.                                         |
+| avy-thing-copy-to-line-end          | copy string to end of line.                                        |
+| avy-thing-replace-to-line-end       | replace string to end of line with content of kill-ring.           |
+|                                     |                                                                    |
+| avy-thing-cut-to-line-beginning     | cut string to beginning of line.                                   |
+| avy-thing-copy-to-line-beginning    | copy string to beginning of line.                                  |
+| avy-thing-replace-to-line-beginning | replace string to beginning of line with content of kill-ring.     |
+|                                     |                                                                    |
+| avy-thing-cut-comment               | cut comment.                                                       |
+| avy-thing-copy-comment              | copy comment.                                                      |
+| avy-thing-replace-comment           | replace comment with content of kill-ring.                         |
+|                                     |                                                                    |
+| avy-thing-cut-paragrap              | cut paragraph around cursor.                                       |
+| avy-thing-copy-paragrap             | copy paragraph around cursor.                                      |
+| avy-thing-replace-paragrap          | replace paragraph around cursor with content of kill-ring.         |
+|                                     |                                                                    |
+| avy-thing-cut-parentheses           | cut parentheses around cursor.                                     |
+| avy-thing-copy-parentheses          | copy parentheses around cursor.                                    |
+| avy-thing-replace-parentheses       | replace parentheses around cursor with content of kill-ring.       |
+|                                     |                                                                    |
+| avy-thing-cut-number                | cut number around cursor.                                          |
+| avy-thing-copy-number               | copy number around cursor.                                         |
+| avy-thing-replace-number            | replace number around cursor with content of kill-ring.            |
+|                                     |                                                                    |
+| avy-thing-cut-whole-buffer          | cut whole buffer                                                   |
+| avy-thing-copy-whole-buffer         | copy whole buffer                                                  |
+| avy-thing-replace-whole-buffer      | replace whole buffer with content of kill-ring.                    |
