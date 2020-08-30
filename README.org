@@ -1,7 +1,7 @@
 * About
   
-  add avy-jump to [[https://github.com/manateelazycat/thing-edit][thing-edit]]
-
+  integrate [[https://github.com/abo-abo/avy][avy-jump]] into [[https://github.com/manateelazycat/thing-edit][thing-edit]].
+  
 * Usage
 ** Installation
    
@@ -11,7 +11,7 @@
      lines:
 
      #+BEGIN_SRC emacs-lisp
-       (add-to-list 'load-path "<path-to-thing-edit>") ; add thing-edit to your load-path
+       (add-to-list 'load-path "<path-to-thing-edit>") ; add avy-thing-edit to your load-path
        (require 'avy-thing-edit)
      #+END_SRC
    
@@ -22,6 +22,7 @@
    
 | Function                            | Description                                                        |
 |-------------------------------------+--------------------------------------------------------------------|
+| avy-thing-cut-sexp                  | cut sexp around cursor.                                            |
 | avy-thing-copy-sexp                 | copy sexp around cursor.                                           |
 | avy-thing-replace-sexp              | replace sexp around cursor with content of kill-ring.              |
 |                                     |                                                                    |
